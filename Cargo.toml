@@ -1,5 +1,5 @@
 [package]
-name = "lm-server-rust"
+name = "lm_server"
 version = "0.1.0"
 edition = "2021"
 
@@ -12,3 +12,11 @@ local-ip-address = "0.6.1"
 reqwest = { version = "0.12.2", features = ["json"] }
 serde = { version = "1.0.197", features = ["derive"] }
 tokio = { version = "1.37.0", features = ["full"] }
+
+[[bin]]
+name = "lm_server"
+path = "src/main.rs"
+
+[lib]
+name = "lm_server"
+path = "src/lib.rs"
