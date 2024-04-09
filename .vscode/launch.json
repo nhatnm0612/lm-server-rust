@@ -7,15 +7,34 @@
         {
             "type": "lldb",
             "request": "launch",
-            "name": "Debug executable 'lm-server-rust'",
+            "name": "Debug unit tests in library 'lm_server'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--lib",
+                    "--package=lm_server"
+                ],
+                "filter": {
+                    "name": "lm_server",
+                    "kind": "lib"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'lm_server'",
             "cargo": {
                 "args": [
                     "build",
-                    "--bin=lm-server-rust",
-                    "--package=lm-server-rust"
+                    "--bin=lm_server",
+                    "--package=lm_server"
                 ],
                 "filter": {
-                    "name": "lm-server-rust",
+                    "name": "lm_server",
                     "kind": "bin"
                 }
             },
@@ -25,16 +44,16 @@
         {
             "type": "lldb",
             "request": "launch",
-            "name": "Debug unit tests in executable 'lm-server-rust'",
+            "name": "Debug unit tests in executable 'lm_server'",
             "cargo": {
                 "args": [
                     "test",
                     "--no-run",
-                    "--bin=lm-server-rust",
-                    "--package=lm-server-rust"
+                    "--bin=lm_server",
+                    "--package=lm_server"
                 ],
                 "filter": {
-                    "name": "lm-server-rust",
+                    "name": "lm_server",
                     "kind": "bin"
                 }
             },

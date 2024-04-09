@@ -28,7 +28,7 @@ pub struct Message {
 #[derive(Debug, Deserialize, Serialize)]
 pub struct PostBody {
     pub temperature: f32,
-    pub max_token: i32,
+    pub max_tokens: i32,
     pub stream: bool,
     pub messages: Vec<Message>,
 }

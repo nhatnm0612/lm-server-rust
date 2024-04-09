@@ -22,7 +22,7 @@ pub async fn scanning_port(port: i32, output_dir: &str, fast_response_time: f32)
     };
     let post_body = PostBody {
         temperature: 0.1,
-        max_token: 12,
+        max_tokens: 12,
         stream: false,
         messages: vec![message],
     };
