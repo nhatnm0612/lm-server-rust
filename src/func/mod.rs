@@ -129,11 +129,11 @@ mod test {
     #[test]
     fn test_remove_old_files() {
         let ip_address_formated: String = local_ip_address_formated();
-        fs::create_dir_all("./tests").unwrap();
-        fs::File::create(format!("./tests/{}_1234_1.txt", ip_address_formated)).unwrap();
-        fs::File::create(format!("./tests/{}_1235_2.txt", ip_address_formated)).unwrap();
-        remove_old_files("./tests").unwrap();
-        assert!(fs::read_dir("./tests").unwrap().collect::<Vec<_>>().len() == 0);
-        fs::remove_dir_all("./tests").unwrap();
+        fs::create_dir_all("./rstests").unwrap();
+        fs::File::create(format!("./rstests/{}_1234_1.txt", ip_address_formated)).unwrap();
+        fs::File::create(format!("./rstests/{}_1235_2.txt", ip_address_formated)).unwrap();
+        remove_old_files("./rstests").unwrap();
+        assert!(fs::read_dir("./rstests").unwrap().collect::<Vec<_>>().len() == 0);
+        fs::remove_dir_all("./rstests").unwrap();
     }
 }
