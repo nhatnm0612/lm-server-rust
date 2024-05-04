@@ -1,3 +1,9 @@
 /target
 
-T:/
+LM-servers/
+
+.venv/
+
+*.sh
+
+__pycache__/

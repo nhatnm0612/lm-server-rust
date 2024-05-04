@@ -5,17 +5,17 @@ use serde::{Deserialize, Serialize};
 pub struct Options {
     #[clap(
         long = "ports",
-        default_value = "1234,1235,1236",
+        default_value = "8080,8081,8082",
         help = "ports to scan, separated by commas"
     )]
     pub ports: String,
     #[clap(
         long = "fast-response-time",
-        default_value = "0.02",
+        default_value = "0.04",
         help = "considering fast response time [s]"
     )]
     pub fast_response_time: f32,
-    #[clap(long = "output-folder", default_value = "T:/LM-servers")]
+    #[clap(long = "output-folder", default_value = "LM-servers")]
     pub output_dir: String,
 }
 
