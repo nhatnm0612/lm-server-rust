@@ -50,7 +50,7 @@ class ResponseModel(BaseModel):
 
 
 @app.post("/v1/chat/completions")
-async def completions(req: RequestModel) -> ResponseModel:
+async def completions(_: RequestModel) -> ResponseModel:
     """Fake OpenAI endpoint for chat completions"""
     message = MessageContent(content=lorem.text())
     resp_message = ResponseMessage(message=message)
