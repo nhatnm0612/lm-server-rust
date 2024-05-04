@@ -41,4 +41,4 @@ ENVIRON=dev cargo run
 ```
 
 ### Fake Server
-Fake server in `.dev/main.py` is a Python FastAPI Server mimicking OpenAI completions route. Used for development only.
+Fake server in `./dev/main.py` is a Python FastAPI Server mimicking OpenAI completions route. Used for development only.
