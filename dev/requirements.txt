@@ -1,4 +1,5 @@
 fastapi==0.111.0
+httpx==4.3.0
 lorem==0.1.1
 pydantic==2.7.1
 uvicorn==0.29.0

@@ -5,3 +5,5 @@ LM-servers/
 .venv/
 
 __pycache__/
+
+.coverage
