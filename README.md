@@ -3,6 +3,7 @@
 
 [![Rust Check](https://github.com/nhatnm0612/lm-server-rust/actions/workflows/rust.yml/badge.svg?branch=main)](https://github.com/nhatnm0612/lm-server-rust/actions/workflows/rust.yml?query=branch%3Amain)
 [![Python Check](https://github.com/nhatnm0612/lm-server-rust/actions/workflows/python-app.yml/badge.svg?branch=main)](https://github.com/nhatnm0612/lm-server-rust/actions/workflows/python-app.yml?query=branch%3Amain)
+[![codecov](https://codecov.io/gh/nhatnm0612/lm-server-rust/graph/badge.svg?token=5ARNRQFB42)](https://codecov.io/gh/nhatnm0612/lm-server-rust)
 
 - [Description](#description)
 - [How to run?](#how-to-run)
