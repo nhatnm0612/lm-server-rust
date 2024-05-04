@@ -1,7 +1,7 @@
 """Testing code"""
 
 from fastapi.testclient import TestClient
-from dev.main import app
+from dev.main import app  # pylint: disable=import-error
 
 
 client = TestClient(app=app)
