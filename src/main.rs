@@ -46,16 +46,19 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         options.output_dir.blue()
     );
     let ports: Vec<String> = options.ports.split(",").map(|p| p.to_string()).collect();
-    println!(
-        "{}",
-        "[*] Run fake Large Language Model Servers".blue().bold()
-    );
-    ensure_virtual_environment();
-    thread::sleep(time::Duration::from_secs(30));
-    for port in &ports {
-        run_fake_server(port);
+    let environ: String = std::env::var("ENVIRON").unwrap_or("prod".to_string());
+    if environ == "dev".to_string() {
+        println!(
+            "{}",
+            "[*] Run fake Large Language Model Servers".blue().bold()
+        );
+        ensure_virtual_environment();
+        thread::sleep(time::Duration::from_secs(30));
+        for port in &ports {
+            run_fake_server(port);
+        }
+        thread::sleep(time::Duration::from_secs(15));
     }
-    thread::sleep(time::Duration::from_secs(15));
     ensure_output_dir(&options.output_dir)?;
     println!(
         "{} {}",
